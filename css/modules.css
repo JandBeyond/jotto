@@ -26,6 +26,21 @@
 	margin: 0 5px;
 	font-size: 0.8rem;
 }
+.banner {
+	height: 600px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+}
+.overlay h1 {
+	background-color: rgba(92, 92, 92, 0.5);
+	padding: var(--s2);
+	color: var(--c-main);
+}
+
 .moduletable h2 {
 	margin-bottom: var(--s2);
 }
@@ -41,13 +56,20 @@
 .boxed:not(:last-child) {
     margin-bottom: var(--s3);
 }
-aside ul.mod-list {
-	list-style: disc;
-	margin-left: var(--s2);
+.winner h4 {
+	margin: var(--s1) 0;
 }
-aside .mod-list li a {
+.winner-list figcaption {
 	padding: var(--s1) 0;
 }
+.winner .mod-articles-category-writtenby {
+	padding: var(--s1) 0;
+}
+.winner li:not(:last-child) {
+	padding-bottom: var(--s2);
+	border-bottom: 3px dotted var(--c-head);
+}
+
 footer .wrap-inside {
 	display: flex;
 	flex-wrap: wrap;

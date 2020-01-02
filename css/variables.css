@@ -1,13 +1,14 @@
 /* Variables */
 :root {
-	--c-back: #d8eefe; /* light blue */
-	--c-highlight: #3da9fc; /* bright blue */
-	--c-secondary: #90b4ce; /* gray blue */
-	--c-tertiary: #ef4565; /* red */
-	--c-primary: #5f6c7b; /* gray */
-	--c-head: #094067; /* dark blue */
-	--c-main: #fffffe; /* white */
+	--c-main: #ffffff; /* white */
 	--c-bg: #f9f9f9;
+	--c-primary: #292929; /* dark blue */
+	--c-secondary: #90b4ce; /* gray blue */
+	--c-tertiary: #f44321; /* red */
+	--c-head: #5091cd; /* blue */
+	--c-back: #d8eefe; /* light blue */
+	--c-highlight: #f9a541; /* yellow */
+	--c-hint: #7ac143; /* green */
 	
 	--s1: 1ch;
 	--s2: 2ch;

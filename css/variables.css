@@ -1,0 +1,21 @@
+/* Variables */
+:root {
+	--c-back: #d8eefe; /* light blue */
+	--c-highlight: #3da9fc; /* bright blue */
+	--c-secondary: #90b4ce; /* gray blue */
+	--c-tertiary: #ef4565; /* red */
+	--c-primary: #5f6c7b; /* gray */
+	--c-head: #094067; /* dark blue */
+	--c-main: #fffffe; /* white */
+	--c-bg: #f9f9f9;
+	
+	--s1: 1ch;
+	--s2: 2ch;
+	--s3: 3ch;
+	--s4: 4ch;
+	--s5: 5ch;
+	--s6: 6ch;
+
+	--card-shadow: 0 1px 4px 0 rgba(12, 12, 13, 0.1);
+	--card-shadow-hover: 0 1px 4px 0 rgba(12, 12, 13, 0.3);
+}

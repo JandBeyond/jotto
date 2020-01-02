@@ -1,0 +1,95 @@
+/* Navigation */
+nav {
+	color: var(--c-main);
+	display: flex;
+	justify-content: flex-end;
+	font-size: 1.2rem;
+}
+nav ul li a, nav ul li .nav-header {
+    padding: var(--s1);
+    text-transform: uppercase;
+	color: var(--c-main);
+	text-decoration: none;
+}
+nav ul li.active a {
+	color: var(--c-main);
+	text-decoration: underline solid var(--c-head) 6px;
+	text-decoration-skip-ink: none;
+	text-underline-offset: -2px;
+}
+#mainMenu li a:hover {
+	color: var(--c-main);
+	text-decoration: underline solid var(--c-head) 6px;
+	text-decoration-skip-ink: none;
+	text-underline-offset: -2px;
+}
+#mainMenu {
+	padding: 20px;
+}
+#mainMenu input {
+	display: block;
+	width: 40px;
+	height: 32px;
+	position: absolute;
+	top: 13px;
+	right: 13px;
+	cursor: pointer;
+	opacity: 0;
+	z-index: 2;
+	-webkit-touch-callout: none;
+}
+#mainMenu > span {
+	display: block;
+	width: 33px;
+	height: 4px;
+	margin-bottom: 5px;
+	position: relative;
+	background: #ef4565;
+	border-radius: 3px;
+	z-index: 1;
+	transform-origin: 4px 0px;
+	transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), opacity 0.55s ease;
+}
+#mainMenu > span:first-child {
+	transform-origin: 0% 0%;
+}
+#mainMenu > span:nth-last-child(2) {
+	transform-origin: 0% 100%;
+}
+#mainMenu input:checked~span {
+	opacity: 1;
+	background: #fff;
+	transform: rotate(45deg) translate(-2px, -1px);
+}
+#mainMenu input:checked~span:nth-last-child(3) {
+	opacity: 0;
+	transform: rotate(0deg) scale(0.2, 0.2);
+}
+#mainMenu input:checked~span:nth-last-child(2) {
+	transform: rotate(-45deg) translate(0, -1px);
+}
+#mainMenu ul {
+	background-color: #3da9fc;
+	border-radius: 70% 0 60% 50%;
+	box-sizing: content-box;
+	padding: 100px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 300px;
+	height: 300px;
+	text-align: center;
+	margin: 0;
+	-webkit-font-smoothing: antialiased;
+	/* to stop flickering of text in safari */
+	transform-origin: 0% 0%;
+	transform: translate(100%, -100%);
+	transition: transform 0.8s ease;
+}
+#mainMenu input:checked ~ ul {
+	transform: none;
+}
+#mainMenu ul li {
+	text-transform: uppercase;
+	padding: 30px;
+}

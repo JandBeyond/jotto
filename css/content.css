@@ -1,0 +1,116 @@
+article {
+	padding: 0 var(--s2) var(--s3);
+}
+article p:not(:last-child) {
+	margin-bottom: var(--s1);
+}
+/* Blog Home */
+.front .page-header h1 {
+	padding-top: var(--s1);
+}
+.front .subtitle {
+	text-align: center;
+}
+.blog-featured {
+    padding-bottom: var(--s4);
+}
+.blog-featured .items-row .item a {
+	background-color: #fff;
+	padding: 0 var(--s2) var(--s2);
+	box-shadow: var(--card-shadow);
+	display: flex;
+	flex-flow: column wrap;
+	align-items: stretch;
+	height: 100%;
+}
+.blog-featured .items-row .item a:hover {
+	box-shadow: var(--card-shadow-hover);
+}
+.blog-featured .items-row .item a div:last-child {
+	margin-top: auto;
+}
+.blog-featured .items-row .item h2 {
+	margin: var(--s1) 0;
+}
+.blog-featured .item .item-image {
+    margin: 0 calc(var(--s2) * -1);
+    height: 250px;
+}
+.blog-featured .item .item-image a {
+	display: block;
+    width: 100%;
+}
+.blog-featured .item a {
+	color: #000;
+	text-decoration: none;
+}
+.item-image figure {
+    margin: 0;
+    height: 100%;
+	display: block;
+}
+.blog-featured .item .item-image img {
+    height: 100%;
+    object-fit: cover;
+	width: 100%;
+}
+.article-info {
+	font-size: 0.8rem;
+	color: var(--c-gray-2);
+}
+.item-page .pull-left {
+	float: left;
+}
+.item-page .pull-left img {
+	margin-right: var(--s2);
+	padding: 4px;
+	border: 1px solid #dddddd;
+	border-radius: 4px;
+}
+.cat-children {
+	padding-bottom: var(--s3);
+}
+.cat-children div:not(:last-child) {
+	margin-bottom: var(--s3);
+}
+.cat-children a {
+	display: flex;
+	align-items: center;
+}
+.cat-children a img {
+	margin-right: var(--s2);
+}
+.blog .items-row:not(:last-child) {
+    border-bottom: 2px dotted var(--c-light-blue-2);
+    margin-bottom: var(--s3);
+}
+.blog .span12 {
+  overflow: hidden;
+}
+
+.blog .span12 > * {
+  display: flex;
+  flex-wrap: wrap;
+  margin: calc(var(--s2) / 2 * -1);
+  padding-bottom: 30px;
+}
+
+.blog .span12 > * > * {
+  margin: calc(var(--s2) / 2);
+  flex-basis: 25rem;
+  flex-grow: 1;
+}
+
+.blog .span12 > * > :last-child {
+  flex-basis: 0;
+  flex-grow: 999;
+  min-width: calc(50% - var(--s2));
+}
+.blog .item-image img {
+	width: 100%;
+}
+.pagenav {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 30px;
+}

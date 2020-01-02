@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="4" type="template" client="site" method="upgrade">
+	<name>J!Otto</name>
+	<creationDate>29. Dezember 2019</creationDate>
+	<author>Viviana Menzel</author>
+	<authorEmail>vivianamenzel@dr-menzel-it.de</authorEmail>
+	<authorUrl>https://www.dr-menzel-it.de</authorUrl>
+	<copyright>Copyright (C) 2019 Viviana Menzel. All rights reserved.</copyright>
+	<version>1.0.0</version>
+	<description><![CDATA[
+		<h1>J!Otto</h1>
+		<p>Created by <a href="https://www.dr-menzel-it.de" target="_blank">Viviana Menzel</a>.</p>
+	]]></description>
+
+	<files>
+		<folder>css</folder>
+		<folder>fonts</folder>
+		<folder>html</folder>
+		<folder>img</folder>
+		<folder>js</folder>
+		<filename>component.php</filename>
+		<filename>error.php</filename>
+		<filename>favicon.ico</filename>
+		<filename>index.php</filename>
+		<filename>offline.php</filename>
+		<filename>template_preview.png</filename>
+		<filename>template_thumbnail.png</filename>
+		<filename>templateDetails.xml</filename>
+	</files>
+
+	<positions>
+		<position>menu</position>
+		<position>header</position>
+		<position>logo</position>
+		<position>top_a</position>
+		<position>breadcrumbs</position>
+		<position>main_top</position>
+		<position>sidebar</position>
+		<position>main_bottom</position>
+		<position>bottom_a</position>
+		<position>bottom_b</position>
+		<position>bottom_c</position>
+		<position>footer</position>
+		<position>debug</position>
+	</positions>
+</extension>

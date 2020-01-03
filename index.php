@@ -1,6 +1,6 @@
 <?php defined( '_JEXEC' ) or die;
 
-//JHtml::script(Juri::base() . 'templates/'.$this->template.'/css/app.js');
+//JHtml::script(Juri::base() . 'templates/'.$this->template.'/js/app.js');
 JHtml::stylesheet(Juri::base() . 'templates/'.$this->template.'/css/style.css');
 
 $app = JFactory::getApplication();
@@ -15,7 +15,13 @@ $doc->addStyleSheet($this->baseurl.'/media/vendor/fontawesome-free/css/fontaweso
 <html lang="<?php echo $this->language; ?>">
 
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1 />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="apple-touch-icon" sizes="180x180" href="<?php echo Juri::base() . 'templates/'.$this->template; ?>/img/apple-touch-icon.png"> 
+	<link rel="icon" type="image/png" sizes="32x32" href="<?php echo Juri::base() . 'templates/'.$this->template; ?>/img/favicon-32x32.png"> 
+	<link rel="icon" type="image/png" sizes="16x16" href="<?php echo Juri::base() . 'templates/'.$this->template; ?>/img/favicon-16x16.png"> 
+	<link rel="manifest" href="<?php echo Juri::base() . 'templates/'.$this->template; ?>/img/favicon/site.webmanifest"> 
+	<meta name="msapplication-TileColor" content="#5091cd"> 
+	<meta name="theme-color" content="#ffffff">
 	<jdoc:include type="head" />
 </head>
 

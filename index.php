@@ -139,7 +139,9 @@ $doc->addStyleSheet($this->baseurl.'/media/vendor/fontawesome-free/css/fontaweso
 			<jdoc:include type="modules" name="footer" style="html5" />
 		</div>
 	</footer>
+	<button id="backToTop" onClick="scrollToSmoothly(0, window.scrollY)"><i class="fa fa-chevron-up"></i></button>
 	<jdoc:include type="modules" name="debug" />
+	<script src="<?php echo $this->baseurl.'/templates/'.$this->template; ?>/js/app.js"></script>
 </body>
 
 </html>

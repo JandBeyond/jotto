@@ -94,8 +94,13 @@
 	flex: 1 1 620px;
 	margin: var(--s1);
 	padding: var(--s2);
-	border-radius: 25px 40px 15px 30px;
 } 
+.cats ul li:nth-child(odd) {
+	border-radius: 25px 40px 15px 30px;
+}
+.cats ul li:nth-child(even) {
+	border-radius: 15px 30px 25px 40px;
+}
 .cats ul li:nth-child(1) {
 	background-color: var(--c-hint);
 } 

@@ -37,7 +37,8 @@ $doc->addStyleSheet($this->baseurl.'/media/vendor/fontawesome-free/css/fontaweso
 
 	<nav role="navigation">
 		<div id="mainMenu">
-			<input type="checkbox" />
+			<input id="hamburger-menu" name="menu" type="checkbox" />
+			<label for="hamburger-menu" class="visuallyhidden">Menü öffnen</label>
 			<span></span>
 			<span></span>
 			<span></span>

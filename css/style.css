@@ -10,6 +10,7 @@
   font-family: 'Noto Sans';
   font-style: normal;
   font-weight: 400;
+  font-display: swap;
   src: url('../fonts/noto-sans-v9-latin-regular.eot'); /* IE9 Compat Modes */
   src: local('Noto Sans'), local('NotoSans'),
        url('../fonts/noto-sans-v9-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -24,6 +25,7 @@
   font-family: 'Noto Sans';
   font-style: normal;
   font-weight: 700;
+  font-display: swap;
   src: url('../fonts/noto-sans-v9-latin-700.eot'); /* IE9 Compat Modes */
   src: local('Noto Sans Bold'), local('NotoSans-Bold'),
        url('../fonts/noto-sans-v9-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -37,6 +39,7 @@
   font-family: 'Raleway';
   font-style: normal;
   font-weight: 400;
+  font-display: swap;
   src: url('../fonts/raleway-v14-latin-regular.eot'); /* IE9 Compat Modes */
   src: local('Raleway'), local('Raleway-Regular'),
        url('../fonts/raleway-v14-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -51,6 +54,7 @@
   font-family: 'Raleway';
   font-style: normal;
   font-weight: 700;
+  font-display: swap;
   src: url('../fonts/raleway-v14-latin-700.eot'); /* IE9 Compat Modes */
   src: local('Raleway Bold'), local('Raleway-Bold'),
        url('../fonts/raleway-v14-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -138,6 +142,17 @@ a:focus {
 	outline: 2px solid var(--c-highlight);
 	outline-offset: 4px;
 }
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+
+}
 .small {
 	font-size: 0.8rem;
 }
@@ -169,7 +184,7 @@ a:focus {
 button {
 	cursor: pointer;
 }
-input {
+input, textarea {
 	border: 1px solid #ddd;
 	padding: var(--s1);
 	border-radius: 4px;
@@ -251,6 +266,9 @@ main {
   flex-grow: 999;
   min-width: calc(60% - var(--s1));
 }
+aside {
+	padding: var(--s3) 0;
+}
 #bottom-a {
 	background-color: #fff;	
 	padding: var(--s6) var(--s2);
@@ -277,9 +295,9 @@ footer {
 	flex-wrap: wrap;
 }
 .bottom-nav ul li a {
-    padding: var(--s1);
+    padding: var(--s2);
     text-align: center;
-	color: #fff;
+	color: var(--c-main);
 }
 /* Pagination */
 .pagination {

@@ -27,7 +27,7 @@
 	font-size: 0.8rem;
 }
 .banner {
-	height: 600px;
+	height: 400px;
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;
@@ -39,6 +39,7 @@
 	background-color: rgba(92, 92, 92, 0.5);
 	padding: var(--s2);
 	color: var(--c-main);
+	line-height: 3.5rem;
 }
 
 .moduletable h2 {
@@ -50,8 +51,10 @@
 	padding: var(--s2);
 }
 .boxed h3 {
+	text-decoration: underline solid var(--c-head) 8px;
+	text-decoration-skip-ink: none;
+	text-underline-offset: -2px;
 	margin-bottom: var(--s1);
-    border-bottom: 2px dotted var(--c-tertiary);
 }
 .boxed:not(:last-child) {
     margin-bottom: var(--s3);
@@ -69,7 +72,18 @@
 	padding-bottom: var(--s2);
 	border-bottom: 3px dotted var(--c-head);
 }
-
+.winner-list a:hover img {
+	-webkit-filter: grayscale(1);
+	filter: grayscale(1);
+}
+.archiv li::before {
+  font-family: 'Font Awesome 5 Free';
+  font-style: normal;
+  font-weight: 900;
+  content: '\f091';
+  color: var(--c-head);
+  margin-right: var(--s1);
+}
 footer .wrap-inside {
 	display: flex;
 	flex-wrap: wrap;

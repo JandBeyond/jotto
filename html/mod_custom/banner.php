@@ -10,7 +10,7 @@
 defined('_JEXEC') or die;
 ?>
 
-<div class="mod-custom custom<?php echo $moduleclass_sfx; ?>" <?php if ($params->get('backgroundimage')) : ?> style="background-image:url(<?php echo $params->get('backgroundimage'); ?>)"<?php endif; ?> >
+<div class="mod-custom custom banner" <?php if ($params->get('backgroundimage')) : ?> style="background-image:url(<?php echo $params->get('backgroundimage'); ?>)"<?php endif; ?> >
 	<div class="overlay">
 		<?php echo $module->content; ?>
 	</div>

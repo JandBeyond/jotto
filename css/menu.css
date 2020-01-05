@@ -13,15 +13,13 @@ nav ul li a, nav ul li .nav-header {
 }
 nav ul li.active a {
 	color: var(--c-main);
-	text-decoration: underline solid var(--c-highlight) 6px;
+	text-decoration: underline solid var(--c-highlight);
 	text-decoration-skip-ink: none;
-	text-underline-offset: -2px;
 }
 #mainMenu li a:hover {
 	color: var(--c-main);
-	text-decoration: underline solid var(--c-highlight) 6px;
+	text-decoration: underline solid var(--c-highlight);
 	text-decoration-skip-ink: none;
-	text-underline-offset: -2px;
 }
 #mainMenu {
 	padding: 20px;

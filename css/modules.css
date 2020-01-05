@@ -51,9 +51,8 @@
 	padding: var(--s2);
 }
 .boxed h3 {
-	text-decoration: underline solid var(--c-head) 8px;
+	text-decoration: underline solid var(--c-head);
 	text-decoration-skip-ink: none;
-	text-underline-offset: -2px;
 	margin-bottom: var(--s1);
 }
 .boxed:not(:last-child) {
@@ -137,17 +136,16 @@ footer .social > * {
 }
 footer a {
 	color: #fff;
-    text-decoration: underline solid var(--c-main) 1px;
+    text-decoration: underline solid var(--c-main);
     text-decoration-skip-ink: none;
-    text-underline-offset: 2px;
 }
 footer .nav a:hover {
 	color: var(--c-tertiary);
-    text-decoration: underline solid var(--c-tertiary) 1px;
+    text-decoration: underline solid var(--c-tertiary);
 }
 footer .nav a:active {
 	color: var(--c-tertiary);
-    text-decoration: underline solid var(--c-tertiary) 1px;
+    text-decoration: underline solid var(--c-tertiary);
 }
 footer .nav a:focus {
 	outline: 2px solid var(--c-tertiary);

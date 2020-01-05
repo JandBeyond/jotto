@@ -107,9 +107,8 @@ h2 {
 	margin-bottom: var(--s1);
 }
 h2.item-title, .page-header h2 {
-	text-decoration: underline solid var(--c-highlight) 8px;
+	text-decoration: underline solid var(--c-highlight);
 	text-decoration-skip-ink: none;
-	text-underline-offset: -2px;
 	margin-bottom: var(--s1);
 }
 h2 a, .page-header h2 a {

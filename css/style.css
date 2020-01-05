@@ -106,11 +106,6 @@ h2 {
 	color: var(--c-head);
 	margin-bottom: var(--s1);
 }
-h2.item-title, .page-header h2 {
-	text-decoration: underline solid var(--c-highlight);
-	text-decoration-skip-ink: none;
-	margin-bottom: var(--s1);
-}
 h2 a, .page-header h2 a {
 	text-decoration: none; 
 }

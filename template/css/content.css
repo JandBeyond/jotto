@@ -35,6 +35,14 @@ fieldset {
 	max-width: 80%;
 	font-size: 0.9rem;
 }
+.form-control-feedback, .choices__button_joomla {
+	background-color: var(--c-highlight);
+	padding: var(--s1);
+	margin-left: var(--s2);
+    color: #2f2f2f;
+	font-size: 0.9rem;
+	border: none;
+}
 .control-group {
 	display: flex;
 	flex-wrap: wrap;
@@ -61,11 +69,11 @@ fieldset {
 	padding: 0;
 	margin: 0;
 }
-#jform_com_fields_datenschutzerklaerung .form-check {
+#jform_com_fields_datenschutzerklaerung .form-check, #jform_com_fields_datenschutz_checkbox_einreichung .form-check {
 	display: flex;
 }
-#jform_com_fields_datenschutzerklaerung .form-check input {
-	flex: 1 0 30px;
+#jform_com_fields_datenschutzerklaerung .form-check input, #jform_com_fields_datenschutz_checkbox_einreichung .form-check input {
+	flex: 0 0 30px;
 }
 #attrib-fields-2 {
 	margin-bottom: var(--s2);
@@ -73,3 +81,10 @@ fieldset {
 #attrib-fields-2 legend {
 	font-weight: 700;
 }
+.edit .control-group {
+	margin: var(--s2) 0;
+}
+.textarea-titel {
+	margin-top: var(--s2);
+}
+

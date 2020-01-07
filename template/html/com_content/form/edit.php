@@ -55,9 +55,12 @@ if (!$editoroptions)
 				<?php echo $this->form->renderField('created_by_alias'); ?>
 			<?php endif; ?>
 
-			<?php echo LayoutHelper::render('joomla.edit.params', $this); ?>
+			<?php echo $this->form->renderField('agentur','com_fields'); ?> 
+			<?php echo $this->form->renderField('e-mail','com_fields'); ?> 
+			<?php echo $this->form->renderField('link-zur-seite','com_fields'); ?> 
+			<?php echo $this->form->renderField('datenschutz-checkbox-einreichung','com_fields'); ?> 
 
-			<p><strong><?php echo Text::_('TPL_JOTTO_REASON'); ?></strong></p>
+			<p class="textarea-titel"><strong><?php echo Text::_('TPL_JOTTO_REASON'); ?></strong></p>
 			<?php echo $this->form->getInput('articletext'); ?>
 
 			<?php if ($this->captchaEnabled) : ?>

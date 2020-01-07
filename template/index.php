@@ -1,7 +1,12 @@
-<?php defined( '_JEXEC' ) or die;
+<?php 
 
-//JHtml::script(Juri::base() . 'templates/'.$this->template.'/js/app.js');
-JHtml::stylesheet(Juri::base() . 'templates/'.$this->template.'/css/style.css');
+defined( '_JEXEC' ) or die;
+
+use Joomla\CMS\Factory;
+use Joomla\CMS\Language\Text;
+use Joomla\CMS\Uri\Uri;
+
+JHtml::stylesheet(Uri::root() . 'templates/'.$this->template.'/css/style.css');
 
 $app = JFactory::getApplication();
 $params = $app->getParams();
@@ -138,8 +143,12 @@ $doc->addStyleSheet($this->baseurl.'/media/vendor/fontawesome-free/css/fontaweso
 		<div class="wrap-inside">
 			<jdoc:include type="modules" name="footer" style="html5" />
 		</div>
+		<p class="float-right">
+			<a href="#top" id="back-top" class="back-top">
+				<i class="fa fa-chevron-up" aria-hidden="true"></i>
+			</a>
+		</p>
 	</footer>
-	<button id="backToTop" onClick="scrollToSmoothly(0, window.scrollY)"><i class="fa fa-chevron-up"></i></button>
 	<jdoc:include type="modules" name="debug" />
 	<script src="<?php echo $this->baseurl.'/templates/'.$this->template; ?>/js/app.js"></script>
 </body>

@@ -62,7 +62,10 @@ figure {
 article > * + * {
 	margin-top: 1em;
 }
-
+fieldset {
+	margin: 0;
+	padding: 0;
+}
 /* Inherit fonts for inputs and buttons */
 input,
 button,

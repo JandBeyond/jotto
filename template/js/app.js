@@ -1,54 +1,53 @@
-function scrollToSmoothly(pos, time){
-  /*Time is exact amount of time the scrolling will take (in milliseconds)*/
-  /*Pos is the y-position to scroll to (in pixels)*/
-  /*Code written by hev1*/
-  if(typeof pos!== "number"){
-  pos = parseFloat(pos);
-  }
-  time = time || 500;
-  if(typeof time!== "number"){
-	  time = parseFloat(time);
-  }
-  if(isNaN(pos)){
-   console.warn("Position must be a number or a numeric String.");
-   throw "Position must be a number";
-  }
-  if(isNaN(time)){
-	  console.warn("Time must be a number or a numeric Sting.");
-	  throw "Time must be a number";
-  }
-  if(pos<0||time<0){
-  return;
-  }
-  var currentPos = window.scrollY || window.screenTop;
-	var start = null;
-  var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
-  window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
-  requestAnimationFrame(function step(currentTime){
-  	start = !start? currentTime: start;
-    var progress = currentTime - start;
-    if(currentPos<pos){
-    window.scrollTo(0, ((pos-currentPos)*progress/time)+currentPos);
-    if(progress < time){
-    	requestAnimationFrame(step);
-    } else {
-    	window.scrollTo(0, pos);
-    }
-    } else {
-    window.scrollTo(0, currentPos-((currentPos-pos)*progress/time));
-    if(progress < time){
-    	requestAnimationFrame(step);
-    } else {
-    	window.scrollTo(0, pos);
-    }
-    }
-  });
-}
-var backToTop = document.getElementById("backToTop");
-window.addEventListener("scroll", function(e){
-	if(window.scrollY==0){
-  	backToTop.style.display = "none";
-  } else {
-  	backToTop.style.display = "block";
-  }
-});
+/**
+ * @package     Joomla.Site
+ * @subpackage  Templates.Cassiopeia
+ * @copyright   Copyright (C) 2005 - 2019 Open Source Matters, Inc. All rights reserved.
+ * @license     GNU General Public License version 2 or later; see LICENSE.txt
+ * @since       4.0
+ */
+
+Joomla = window.Joomla || {};
+
+(function(Joomla, document) {
+	'use strict';
+
+	function initTemplate(event) {
+		var target = event && event.target ? event.target : document;
+
+		/**
+		 * Prevent clicks on buttons within a disabled fieldset
+		 */
+		var fieldsets = target.querySelectorAll('fieldset.btn-group');
+		for (var i = 0; i < fieldsets.length; i++) {
+			var self = fieldsets[i];
+			if (self.getAttribute('disabled') ===  true) {
+				self.style.pointerEvents = 'none';
+				var btns = self.querySelectorAll('.btn');
+				for (var ib = 0; ib < btns.length; ib++) {
+					btns[ib].classList.add('disabled');
+				}
+			}
+		}
+	}
+
+	document.addEventListener('DOMContentLoaded', function (event) {
+		initTemplate(event);
+
+		/**
+		 * Back to top
+		 */
+		var backToTop = document.getElementById('back-top');
+		if (backToTop) {
+			backToTop.addEventListener('click', function(event) {
+				event.preventDefault();
+				window.scrollTo(0, 0);
+			});
+		}
+	});
+
+	/**
+	 * Initialize when a part of the page was updated
+	 */
+	document.addEventListener('joomla:updated', initTemplate);
+
+})(Joomla, document);

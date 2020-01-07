@@ -136,7 +136,7 @@ footer a {
 	color: #fff;
     text-decoration: underline;
 }
-footer .nav a:hover {
+footer .nav a:hover, footer a:hover {
 	color: var(--c-tertiary);
 }
 footer .nav a:active {

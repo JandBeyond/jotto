@@ -151,14 +151,15 @@ a:focus {
 	font-size: 0.8rem;
 }
 .btn, .button {
-	background-color: var(--c-main);
+	background-color: var(--c-head);
 	display: inline-block;
-	padding: var(--s1);
-	border-radius: 27px 15px 20px 20px;
-	color: var(--c-tertiary);
+	padding: var(--s2);
+	border-radius: 2em 0.1em 2em 0.1em;
+	color: var(--c-main);
 	text-decoration: none;
-	margin: var(--s2) 0;
-	border: 3px solid var(--c-tertiary);
+	margin: var(--s2);
+	border: 3px solid var(--c-main);
+	box-shadow: var(--c-head) 0 0 0 0.2em;
 }
 .btn:hover, .button:hover {
 	background-color: var(--c-primary);
@@ -174,6 +175,13 @@ a:focus {
 	outline: none;
 	box-shadow: 0 0 0 2px var(--c-secondary), 
               0 0 0 .6rem var(--c-primary);
+}
+.btn-win {
+	background-color: var(--c-highlight);
+	box-shadow: var(--c-highlight) 0 0 0 0.2em;
+	color: var(--c-primary);
+	border-radius: 0;
+	font-size: 1.6rem;
 }
 button {
 	cursor: pointer;
@@ -266,12 +274,8 @@ main {
 aside {
 	padding: var(--s3) 0;
 }
-#bottom-a {
-	background-color: #fff;	
-	padding: var(--s6) var(--s2);
-}
 #bottom-b {
-	background-color: var(--c-secondary);	
+	background-color: #fff;	
 	padding: var(--s6) var(--s2);
 }
 #bottom-a h2,

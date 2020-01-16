@@ -49,7 +49,10 @@ if (!$editoroptions)
 
 			<?php echo $this->form->renderField('title'); ?>
 
-			<?php echo $this->form->renderField('catid'); ?>
+			<?php $this->form->setFieldAttribute('catid', 'type', 'hidden'); ?>
+				<?php echo $this->form->renderField('catid'); ?>
+
+			<?php echo $this->form->renderField('kategorie','com_fields'); ?> 
 
 			<?php if ($params->get('show_publishing_options', 1) == 1) : ?>
 				<?php echo $this->form->renderField('created_by_alias'); ?>

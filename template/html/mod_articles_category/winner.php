@@ -29,16 +29,16 @@ if (!$list)
 				<?php $images   = json_decode($item->images); ?>
 				<?php $urls = json_decode($item->urls); ?>
 					<li>
-						<a href="<?php echo $urls->urla; ?>" target="_blank" itemprop="url">
+<!--						<a href="<?php echo $urls->urla; ?>" target="_blank" itemprop="url"> -->
 							<figure>
 								<figcaption>
-									<p itemprop="name">
+									<h5>
 										<?php echo $item->title; ?>
-									</p>
+									</h5>
 								</figcaption>
 								<img loading="lazy" class="lazyload" src="<?php echo htmlspecialchars($images->image_intro); ?>" alt="<?php echo $item->title; ?>">
 							</figure>
-						</a>
+<!--						</a> -->
 						<?php if ($params->get('show_author')) : ?>
 							<span class="mod-articles-category-writtenby">
 								<?php echo $item->displayAuthorName; ?>

@@ -87,4 +87,12 @@ fieldset {
 .textarea-titel {
 	margin-top: var(--s2);
 }
+.edit .btn-group .btn {
+	padding: calc(var(--s1)/2);
+	margin: calc(var(--s1)/2);
+	border-radius: 0;
+	box-shadow: none;
+	border: none;
+	text-align: center;
+}
 

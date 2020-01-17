@@ -91,6 +91,11 @@ ul.winner-gallery {
 	-webkit-transform: scale(1.05);
 	transform: scale(1.05);
 }
+.winner-cat {
+	background-color: #757575;
+	padding: var(--s1);
+	color: var(--c-main);
+}
 .archiv li::before {
   font-family: 'Font Awesome 5 Free';
   font-style: normal;

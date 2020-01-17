@@ -24,13 +24,14 @@ if (!$list)
 	<?php $images   = json_decode($item->images); ?>
 		<li>
 			<figure>
-				<img loading="lazy" class="lazyload" src="<?php echo htmlspecialchars($images->image_intro); ?>" alt="<?php echo $item->title; ?>">
 				<figcaption>
 					<p>
 						<?php echo $item->title; ?> - <?php echo $item->displayAuthorName; ?>
 					</p>
 				</figcaption>
+				<img loading="lazy" class="lazyload" src="<?php echo htmlspecialchars($images->image_intro); ?>" alt="<?php echo $item->title; ?>">
 			</figure>
+			<div class="winner-cat">Kategorie "<?php echo $item->category_title; ?>"</div>
 		</li>
 	<?php endforeach; ?>
 </ul>

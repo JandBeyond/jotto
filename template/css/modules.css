@@ -42,7 +42,45 @@
 	color: var(--c-main);
 	line-height: 3.5rem;
 }
-
+.top1 {
+	background-color: var(--c-highlight);
+	padding: var(--s1) var(--s2);
+	display: inline-block;
+	box-shadow: 1px 2px 13px 6px rgba(13, 13, 13, 0.15);
+	margin-bottom: var(--s2);
+}
+.top1 h1 {
+	color: var(--c-main);
+	line-height: 3.5rem;
+	text-align: left;
+	margin-bottom: 0;
+}
+.top-flex {
+  overflow: hidden;
+}
+.top-flex > * {
+  display: flex;
+  flex-wrap: wrap;
+  margin: calc(var(--s4) / 2 * -1);
+}
+.top-flex > * > * {
+  margin: calc(var(--s4) / 2);
+  flex-basis: 30%;
+  flex-grow: 1;
+}
+.top-flex > * > :first-child {
+  flex-basis: 0;
+  flex-grow: 999;
+  min-width: calc(60% - var(--s4));
+  padding: 0 var(--s4);
+}
+.top3 {
+	text-align: center;
+}
+.top3 p:nth-child(2) {
+	position: relative;
+	z-index: 1;
+}
 .moduletable h2 {
 	margin-bottom: var(--s2);
 }
@@ -92,10 +130,26 @@ ul.winner-gallery {
 	transform: scale(1.05);
 }
 .winner-cat {
-	background-color: #757575;
+	background-color: var(--c-grey);
 	padding: var(--s1);
 	color: var(--c-main);
 }
+.winner-gallery li:nth-child(2) .winner-cat {
+	background-color: var(--c-head);
+}
+.winner-gallery li:nth-child(3) .winner-cat {
+	background-color: var(--c-highlight);
+}
+.winner-gallery li:nth-child(4) .winner-cat {
+	background-color: var(--c-grey);
+}
+.winner-gallery li:nth-child(5) .winner-cat {
+	background-color: var(--c-hint);
+}
+.winner-gallery li:nth-child(6) .winner-cat {
+	background-color: var(--c-tertiary);
+}
+
 .archiv li::before {
   font-family: 'Font Awesome 5 Free';
   font-style: normal;
@@ -111,39 +165,96 @@ ul.winner-gallery {
 	justify-content: space-around;
 }
 .cats ul li {
-	flex: 1 1 620px;
+	flex: 1 1 420px;
 	margin: var(--s1);
 	padding: var(--s2);
+	position: relative;
 } 
-.cats ul li:nth-child(odd) {
-	border-radius: 2em 0.1em 2em 0.1em;
+.cats ul li:nth-child(1) h4 {
+	color: var(--c-hint);
+} 
+.cats ul li:nth-child(2) h4 {
+	color: var(--c-highlight);
+} 
+.cats ul li:nth-child(6) h4 {
+	color: var(--c-primary);
+} 
+.cats ul li:nth-child(4) h4 {
+	color: var(--c-head);
+} 
+.cats ul li:nth-child(5) h4 {
+	color: var(--c-grey);
+} 
+.cats ul li:nth-child(3) h4 {
+	color: var(--c-tertiary);
 }
-.cats ul li:nth-child(even) {
-	border-radius: 0.1em 2em 0.1em 2em;
-}
-.cats ul li:nth-child(1) {
-	background-color: var(--c-hint);
+.cats ul li:nth-child(1):before {
+	background-image:url(../img/green.svg);
+	background-repeat:no-repeat;
+	background-position:center center;
+	content:"";
+	width:70px;
+	height:70px;
+	position:absolute;
+	top:-32px;
+	left:-20px;
 } 
-.cats ul li:nth-child(2) {
-	background-color: var(--c-highlight);
+.cats ul li:before {
+	background-repeat:no-repeat;
+	background-position:center center;
+	content:"";
+	width:70px;
+	height:70px;
+	position:absolute;
+	top:-25px;
+	left:-20px;
 } 
-.cats ul li:nth-child(3) {
-	background-color: var(--c-primary);
-	color: var(--c-main);
+.cats ul li:nth-child(2):before {
+	background-image:url(../img/orange.svg);
 } 
-.cats ul li:nth-child(4) {
-	background-color: var(--c-head);
+.cats ul li:nth-child(3):before {
+	background-image:url(../img/red.svg);
 } 
-.cats ul li:nth-child(5) {
-	background-color: var(--c-back);
+.cats ul li:nth-child(4):before {
+	background-image:url(../img/blue.svg);
 } 
-.cats ul li:nth-child(6) {
-	background-color: var(--c-tertiary);
-	color: var(--c-main);
+.cats ul li:nth-child(5):before {
+	background-image:url(../img/grey.svg);
 } 
+.cats ul li:nth-child(6):before {
+	background-image:url(../img/black.svg);
+} 
+
 #bottom-a .banner {
 	height: 400px;
 	align-items: center;
+}
+#bottom-a .wrap-inside {
+  overflow: hidden;
+}
+#bottom-a .wrap-inside > * {
+  display: flex;
+  flex-wrap: wrap;
+  margin: calc(var(--s4) / 2 * -1);
+}
+#bottom-a .wrap-inside > * > * {
+  margin: calc(var(--s4) / 2);
+  flex-basis: 30%;
+  flex-grow: 1;
+}
+#bottom-a .wrap-inside > * > :first-child {
+  flex-basis: 0;
+  flex-grow: 999;
+  min-width: calc(60% - var(--s4));
+}
+#bottom-a .wrap-inside > * > :first-child p {
+	margin-bottom: var(--s2);
+}
+#bottom-a .custom div:nth-child(2) p:nth-child(2) {
+	position: relative;
+	z-index: 1;
+	text-align: center;
+	margin-top: var(--s4);
 }
 
 footer .wrap-inside {

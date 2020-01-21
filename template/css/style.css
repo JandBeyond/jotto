@@ -78,7 +78,8 @@
 .fa,
 .fas {
   font-family: 'Font Awesome 5 Free';
-  font-weight: 900; }
+  font-weight: 900; 
+}
 
 
 /* General */
@@ -177,12 +178,62 @@ a:focus {
               0 0 0 .6rem var(--c-primary);
 }
 .btn-win {
-	background-color: var(--c-highlight);
-	box-shadow: var(--c-highlight) 0 0 0 0.2em;
-	color: var(--c-primary);
-	border-radius: 0;
-	font-size: 1.6rem;
+	background-image: linear-gradient(to right, #7AC943, #3C9400);
+	color: var(--c-main);
+	border-radius: 2em 0.1em 2em 0.1em;
+	text-decoration: none;
+	padding: var(--s2);
+	display: inline-block;
+	position: relative;
+	margin-top: 70px;	
+	width:300px;
 }
+.btn-win:hover {
+	color: var(--c-main);
+	text-decoration: underline;
+}
+.btn-win::before {
+	background-image:url(../img/people.svg);
+	background-repeat:no-repeat;
+	background-position:center center;
+	content:"";
+	width:300px;
+	height:70px;
+	position:absolute;
+	top:-30px;
+	left:0px;
+	margin-top:-11px;
+	z-index:-1;
+}
+.btn-archive {
+	background-image: linear-gradient(to right, #3FA9F5, #0057BF);
+	color: var(--c-main);
+	border-radius: 2em 0.1em 2em 0.1em;
+	text-decoration: none;
+	padding: var(--s2);
+	display: inline-block;
+	position: relative;
+	margin-top: 70px;	
+	width:300px;
+}
+.btn-archive:hover {
+	color: var(--c-main);
+	text-decoration: underline;
+}
+.btn-archive::before {
+	content:"\f091";
+	font-family: 'Font Awesome 5 Free';
+	font-weight: 900;
+	font-size: 5rem;
+	color: rgba(255,255,255,0.5);
+	width:300px;
+	height:170px;
+	position:absolute;
+	top:-100px;
+	left:0px;
+	z-index:-1;
+}
+
 button {
 	cursor: pointer;
 }
@@ -235,19 +286,18 @@ hr {
 }
 .logo a {
 	display: inline-block;
-	background: var(--c-main);
-	border-radius: 0 0 50% 50%;
-	padding: 0 30px;
 }
 nav {
     font-family: 'Noto Sans', Helvetica, Arial, sans-serif;
 	font-weight: 700;
+	background-color: var(--c-main);
 }
 header {
-	margin-top: -200px;
+	margin-top: -210px;
 }
 #top-a {
-	padding: var(--s3) var(--s2);
+	padding: var(--s5) var(--s2);
+	background-image: linear-gradient(45deg, #F9A541, #FFD955);
 }
 main {
 	padding: var(--s3) 0;
@@ -274,6 +324,11 @@ main {
 aside {
 	padding: var(--s3) 0;
 }
+#bottom-a {
+	padding: var(--s6) var(--s2);
+	background-image: linear-gradient(45deg, #3FA9F5, #BFECFF);
+}
+
 #bottom-b {
 	background-color: #fff;	
 	padding: var(--s6) var(--s2);

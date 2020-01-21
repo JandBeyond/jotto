@@ -116,7 +116,9 @@ $doc->addStyleSheet($this->baseurl.'/media/vendor/fontawesome-free/css/fontaweso
 	</main>
 	<?php if ($this->countModules( 'bottom_a' )) : ?>
 	<section id="bottom-a">
+		<div class="wrap-inside">
 			<jdoc:include type="modules" name="bottom_a" />
+		</div>
 	</section>
 	<?php endif; ?>
 

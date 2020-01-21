@@ -256,7 +256,12 @@ ul.winner-gallery {
 	text-align: center;
 	margin-top: var(--s4);
 }
-
+#bottom-a h3 {
+	color: var(--c-primary);
+	line-height: 1.25;
+	font-weight: 400;
+	margin-bottom: var(--s1);
+}
 footer .wrap-inside {
 	display: flex;
 	flex-wrap: wrap;

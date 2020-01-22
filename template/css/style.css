@@ -286,6 +286,9 @@ hr {
 	margin-left: auto;
 	margin-right: auto;
 }
+.logo {
+	height: 230px;
+}
 .logo a {
 	display: inline-block;
 }
@@ -295,7 +298,7 @@ nav {
 	background-color: var(--c-main);
 }
 header {
-	margin-top: -210px;
+	margin-top: -230px;
 }
 #top-a {
 	padding: var(--s5) var(--s2);

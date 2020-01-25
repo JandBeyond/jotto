@@ -85,15 +85,23 @@
 	margin-bottom: var(--s2);
 }
 .boxed {
-	background-color: var(--c-back);
+/*	background-color: var(--c-back);*/
+	background-image: linear-gradient(65deg, #BFECFF, #3FA9F5);
 	border-radius: 2em 0.1em 2em 0.1em;
 	padding: var(--s2);
 }
 .boxed h3 {
 	margin-bottom: var(--s1);
+	color: var(--c-main);
 }
 .boxed:not(:last-child) {
     margin-bottom: var(--s3);
+}
+.boxed2 {
+	background-image: linear-gradient(45deg, #F9A541, #FFD955);
+	border-radius: 2em 0.1em 2em 0.1em;
+	padding: var(--s2);
+	margin-bottom: var(--s3);
 }
 .winner h4 {
 	margin: var(--s1) 0;
@@ -103,6 +111,10 @@
 }
 .winner .mod-articles-category-writtenby {
 	padding: var(--s1) 0;
+}
+.winner-list li {
+	padding: var(--s2);
+	background-color: #ececec;
 }
 .winner li:not(:last-child) {
 	padding-bottom: var(--s2);
@@ -149,14 +161,33 @@ ul.winner-gallery {
 .winner-gallery li:nth-child(6) .winner-cat {
 	background-color: var(--c-tertiary);
 }
-
-.archiv li::before {
-  font-family: 'Font Awesome 5 Free';
-  font-style: normal;
-  font-weight: 900;
-  content: '\f091';
-  color: var(--c-head);
-  margin-right: var(--s1);
+.archiv-list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+.archiv-list li a::before {
+	font-family: 'Font Awesome 5 Free';
+	font-style: normal;
+	font-weight: 900;
+	content: '\f091';
+	color: var(--c-main);
+	margin-right: var(--s1);
+}
+.archiv-list a {
+	background-image: linear-gradient(to right, #3FA9F5, #0057BF);
+	color: var(--c-main);
+	border-radius: 2em 0.1em 2em 0.1em;
+	text-decoration: none;
+	padding: var(--s2);
+	box-shadow: 1px 2px 13px 6px rgba(13, 13, 13, 0.15);
+	display: inline-block;
+	margin: var(--s1) 0;
+}
+.archiv-list a:hover {
+	color: var(--c-main);
+	background-image: none;
+	background-color: #0057BF;
 }
 .cats ul {
 	display: flex;

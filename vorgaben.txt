@@ -1,0 +1,30 @@
+Headlines blau aus dem Logo #5091cd
+Text ganz dunkles grau #292929
+Links (in Text) rot aus dem Logo #f44321
+grün für Hinweise mit grünen Hintergrund #7ac143 - Text aber in dunkelgrau wegen Barriere
+gelb für Highlight Boxen #f9a541 mit dunkelgrau Text
+
+
+So hier mal die Infos:
+grün: #7AC143
+orange: #F9A541
+rot: #F44321
+blau: #5091CD
+grau: #878787
+schwarz: #000000 
+
+Farbverlauf gelb:
+Winkel 45°
+#F9A541 zu #FFD955
+
+Farbverlauf blau Hintergrund:
+Winkel 45°
+#3FA9F5 zu #BFECFF
+
+Farbverläufe in Buttons:
+grüne Version #7AC943 zu #3C9400
+blaue Version #3FA9F5 zu #0057BF
+Buttons kann man mit den asymetrischen Rundungen machen
+
+Fläche hinter weissem Titel: #F9A541
+Schein nach aussen über CSS mit Grauton

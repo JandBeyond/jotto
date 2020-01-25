@@ -191,7 +191,8 @@ a:focus {
 }
 .btn-win:hover {
 	color: var(--c-main);
-	text-decoration: underline;
+	background-image: none;
+	background-color: #3C9400;
 }
 .btn-win::before {
 	background-image:url(../img/people.svg);
@@ -220,7 +221,8 @@ a:focus {
 }
 .btn-archive:hover {
 	color: var(--c-main);
-	text-decoration: underline;
+	background-image: none;
+	background-color: #0057BF;
 }
 .btn-archive::before {
 	content:"\f091";
@@ -303,6 +305,9 @@ header {
 #top-a {
 	padding: var(--s5) var(--s2);
 	background-image: linear-gradient(45deg, #F9A541, #FFD955);
+}
+#main-top {
+	padding: var(--s5) var(--s2);
 }
 main {
 	padding: var(--s3) 0;

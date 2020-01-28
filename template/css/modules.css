@@ -293,12 +293,12 @@ ul.winner-gallery {
 	font-weight: 400;
 	margin-bottom: var(--s1);
 }
-footer .wrap-inside {
+/*footer .wrap-inside {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
 	align-items: center;
-}
+}*/
 footer .social {
 	display: flex;
 	color: #fff;

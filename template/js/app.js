@@ -1,53 +1,18 @@
-/**
- * @package     Joomla.Site
- * @subpackage  Templates.Cassiopeia
- * @copyright   Copyright (C) 2005 - 2019 Open Source Matters, Inc. All rights reserved.
- * @license     GNU General Public License version 2 or later; see LICENSE.txt
- * @since       4.0
- */
+//Get the button:
+mybutton = document.getElementById("myBtn");
 
-Joomla = window.Joomla || {};
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
 
-(function(Joomla, document) {
-	'use strict';
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.opacity = 1;
+  } else {
+    mybutton.style.opacity = 0;
+  }
+}
 
-	function initTemplate(event) {
-		var target = event && event.target ? event.target : document;
-
-		/**
-		 * Prevent clicks on buttons within a disabled fieldset
-		 */
-		var fieldsets = target.querySelectorAll('fieldset.btn-group');
-		for (var i = 0; i < fieldsets.length; i++) {
-			var self = fieldsets[i];
-			if (self.getAttribute('disabled') ===  true) {
-				self.style.pointerEvents = 'none';
-				var btns = self.querySelectorAll('.btn');
-				for (var ib = 0; ib < btns.length; ib++) {
-					btns[ib].classList.add('disabled');
-				}
-			}
-		}
-	}
-
-	document.addEventListener('DOMContentLoaded', function (event) {
-		initTemplate(event);
-
-		/**
-		 * Back to top
-		 */
-		var backToTop = document.getElementById('back-top');
-		if (backToTop) {
-			backToTop.addEventListener('click', function(event) {
-				event.preventDefault();
-				window.scrollTo(0, 0);
-			});
-		}
-	});
-
-	/**
-	 * Initialize when a part of the page was updated
-	 */
-	document.addEventListener('joomla:updated', initTemplate);
-
-})(Joomla, document);
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+} 

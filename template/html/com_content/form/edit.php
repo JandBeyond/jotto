@@ -50,7 +50,7 @@ if (!$editoroptions)
 			<?php echo $this->form->renderField('title'); ?>
 
 			<?php $this->form->setFieldAttribute('catid', 'type', 'hidden'); ?>
-				<?php echo $this->form->renderField('catid'); ?>
+			<?php echo $this->form->renderField('catid'); ?>
 
 			<?php echo $this->form->renderField('kategorie','com_fields'); ?> 
 
@@ -61,11 +61,12 @@ if (!$editoroptions)
 			<?php echo $this->form->renderField('agentur','com_fields'); ?> 
 			<?php echo $this->form->renderField('e-mail','com_fields'); ?> 
 			<?php echo $this->form->renderField('link-zur-seite','com_fields'); ?> 
-			<?php echo $this->form->renderField('datenschutz-checkbox-einreichung','com_fields'); ?> 
+			<?php echo $this->form->renderField('preis','com_fields'); ?> 
 
 			<p class="textarea-titel"><strong><?php echo Text::_('TPL_JOTTO_REASON'); ?></strong></p>
 			<?php echo $this->form->getInput('articletext'); ?>
 
+			<?php echo $this->form->renderField('datenschutz-checkbox-einreichung','com_fields'); ?> 
 			<?php if ($this->captchaEnabled) : ?>
 				<?php echo $this->form->renderField('captcha'); ?>
 			<?php endif; ?>

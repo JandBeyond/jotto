@@ -30,7 +30,7 @@
 	height: 500px;
 	background-size: cover;
 	background-repeat: no-repeat;
-	background-position: center center;
+	background-position: center bottom;
 	background-attachment: fixed;
 	display: flex;
 	justify-content: center;
@@ -54,29 +54,30 @@
 	line-height: 3.5rem;
 	text-align: left;
 	margin-bottom: 0;
+	font-size: 3.4rem;
 }
 .top-flex {
-  overflow: hidden;
+	overflow: hidden;
 }
 .top-flex > * {
-  display: flex;
-  flex-wrap: wrap;
-  margin: calc(var(--s4) / 2 * -1);
+	display: flex;
+	flex-wrap: wrap;
+	margin: calc(var(--s4) / 2 * -1);
 }
 .top-flex > * > * {
-  margin: calc(var(--s4) / 2);
-  flex-basis: 40%;
-  flex-grow: 1;
+	margin: calc(var(--s4) / 2);
+	flex-basis: 40%;
+	flex-grow: 1;
 }
 .top-flex > * > :first-child {
-  flex-basis: 0;
-  flex-grow: 999;
-  min-width: calc(50% - var(--s4));
-  padding: 0 var(--s5);
+	flex-basis: 0;
+	flex-grow: 999;
+	min-width: calc(50% - var(--s4));
+	padding: 0 var(--s5);
 }
 .top3 {
 	text-align: center;
-  padding: 0 var(--s5);
+	padding: 0 var(--s5);
 }
 .top3 p:nth-child(2) {
 	position: relative;

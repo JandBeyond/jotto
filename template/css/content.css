@@ -75,6 +75,9 @@ fieldset {
 #jform_com_fields_datenschutzerklaerung .form-check input, #jform_com_fields_datenschutz_checkbox_einreichung .form-check input {
 	flex: 0 0 30px;
 }
+.form-check-input {
+	margin-right: var(--s1);
+}
 #attrib-fields-2 {
 	margin-bottom: var(--s2);
 }

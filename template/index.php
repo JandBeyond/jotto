@@ -2,11 +2,13 @@
 
 defined( '_JEXEC' ) or die;
 
+use Joomla\CMS\HTML\HTMLHelper;
 use Joomla\CMS\Factory;
 use Joomla\CMS\Language\Text;
 use Joomla\CMS\Uri\Uri;
 
-JHtml::stylesheet(Uri::root() . 'templates/'.$this->template.'/css/style.css');
+$templatePath = Uri::root() . 'templates/'.$this->template.'/css/style.css';
+HTMLHelper::_('stylesheet', $templatePath, ['version' => 'auto', 'relative' => true]);
 
 $app = JFactory::getApplication();
 $params = $app->getParams();

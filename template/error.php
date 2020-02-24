@@ -1,17 +1,26 @@
-<?php defined( '_JEXEC' ) or die;
+<?php 
+defined('_JEXEC') or die;
 
-// variables
-$app = JFactory::getApplication();
+use Joomla\CMS\Factory;
+use Joomla\CMS\Language\Text;
+use Joomla\CMS\Uri\Uri;
 
-?><!doctype html>
+/** @var JDocumentError $this */
+
+$app  = Factory::getApplication();
+$lang = Factory::getLanguage();
+$wa   = $this->getWebAssetManager();
+
+?>
+<!doctype html>
 
 <html lang="<?php echo $this->language; ?>">
 
 <head>
-  <meta charset="utf-8" />
-  <title><?php echo $this->error->getCode(); ?> - <?php echo $this->title; ?></title>
-  <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
-  <link href="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/css/style.css" rel="stylesheet" />
+	<meta charset="utf-8" />
+	<title><?php echo $this->error->getCode(); ?> - <?php echo $this->title; ?></title>
+ 	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link href="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/css/style.css" rel="stylesheet" />
 </head>
 
 <body>

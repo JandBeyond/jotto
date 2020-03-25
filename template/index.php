@@ -29,6 +29,10 @@ $doc->addStyleSheet($this->baseurl.'/media/vendor/fontawesome-free/css/fontaweso
 	<link rel="manifest" href="<?php echo Juri::base() . 'templates/'.$this->template; ?>/img/favicon/site.webmanifest"> 
 	<meta name="msapplication-TileColor" content="#5091cd"> 
 	<meta name="theme-color" content="#ffffff">
+	<meta property="og:image" content="<?php echo Juri::base() . 'images/jotto-og.jpg'; ?>">
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="1200" />
+	<meta property="og:image:alt" content="J!Otto Community Award" />
 	<jdoc:include type="head" />
 </head>
 

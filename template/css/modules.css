@@ -56,6 +56,24 @@
 	margin-bottom: 0;
 	font-size: 3.4rem;
 }
+@media screen and (max-width: 468px) {
+	.top1 h1 {
+		line-height: 2.1rem;
+		font-size: 2rem;
+	}
+	.top-flex > * {
+		padding: var(--s2);
+	}
+	.top-flex .top2,
+	.top-flex .top3,
+	#bottom-a .wrap-inside > * > * {
+		padding: 0 !important;
+		margin: 0;
+	}
+	.btn-win, .btn-archive {
+		font-size: 0.9rem;
+	}
+}
 .top-flex {
 	overflow: hidden;
 }
@@ -66,7 +84,7 @@
 }
 .top-flex > * > * {
 	margin: calc(var(--s4) / 2);
-	flex-basis: 40%;
+	flex-basis: 500px;
 	flex-grow: 1;
 }
 .top-flex > * > :first-child {
@@ -128,13 +146,14 @@
 }
 
 ul.winner-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
-  grid-gap: 2rem;
-  margin: 1rem 0;
+  display: flex;
+  flex-wrap: wrap;
 }
 .winner-gallery li {
 	text-align: center;
+	flex-grow: 1;
+	flex-basis: 400px;
+	margin: var(--s2);
 }
 .winner-gallery img {
 	transition: all 0.5s;
@@ -168,14 +187,14 @@ ul.winner-gallery {
 	flex-wrap: wrap;
 	justify-content: space-evenly;
 }
-.archiv-list li a::before {
+/*.archiv-list li a::before {
 	font-family: 'Font Awesome 5 Free';
 	font-style: normal;
 	font-weight: 900;
 	content: '\f091';
 	color: var(--c-main);
 	margin-right: var(--s1);
-}
+}*/
 .archiv-list a {
 	background-image: linear-gradient(to right, #3FA9F5, #0057BF);
 	color: var(--c-main);
@@ -272,7 +291,7 @@ ul.winner-gallery {
 }
 #bottom-a .wrap-inside > * > * {
 	margin: calc(var(--s4) / 2);
-	flex-basis: 40%;
+	flex-basis: 500px;
 	flex-grow: 1;
 	padding: 0 var(--s5);
 }

@@ -16,7 +16,7 @@ $pageclass = $params->get('pageclass_sfx');
 $menu = $app->getMenu();
 $active = $app->getMenu()->getActive();
 $doc = JFactory::getDocument();
-$doc->addStyleSheet($this->baseurl.'/media/vendor/fontawesome-free/css/fontawesome.min.css');
+//$doc->addStyleSheet($this->baseurl.'/media/vendor/fontawesome-free/css/fontawesome.min.css');
 
 ?><!doctype html>
 <html lang="<?php echo $this->language; ?>">
@@ -148,7 +148,7 @@ $doc->addStyleSheet($this->baseurl.'/media/vendor/fontawesome-free/css/fontaweso
 	<footer>
 		<div class="wrap-inside">
 			<jdoc:include type="modules" name="footer" style="html5" />
-			<p class="footertext">Made with <img src="<?php echo $this->baseurl.'/templates/'.$this->template; ?>/img/herz.png" class="fa-beat" style="display:inline-block; vertical-align:middle;"> by <a href="https://www.dr-menzel-it.de" target="_blank" rel="noopener noreferrer nofollow">Viviana Menzel</a> - Design <a href="https://www.8ung-media.de/" target="_blank" rel="noopener noreferrer nofollow">Ralf Nöppert</a> / Viviana Menzel - Entwicklung <a href="https://www.chmst.de/" target="_blank" rel="noopener noreferrer nofollow">Christiane Maier-Stadtherr</a></p>
+			<p class="footertext">Made with <img src="<?php echo $this->baseurl.'/templates/'.$this->template; ?>/img/herz.png" class="fa-beat" style="display:inline-block; vertical-align:middle;"> by <a href="https://www.dr-menzel-it.de" target="_blank" rel="noopener noreferrer nofollow">Viviana Menzel</a> - Design <a href="https://www.8ung-media.de/" target="_blank" rel="noopener noreferrer nofollow">Ralf Nöppert</a> / Viviana Menzel - Entwicklung <a href="https://www.chmst.de/" target="_blank" rel="noopener noreferrer nofollow">Christiane Maier-Stadtherr</a> - Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></p>
 		</div>
 	</footer>
 	<button onclick="topFunction()" id="myBtn" title="Nach oben"><i class="fa fa-chevron-up" aria-hidden="true"></i></button> 

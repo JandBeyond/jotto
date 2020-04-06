@@ -235,10 +235,10 @@ a:focus {
 	font-weight: 900;
 	font-size: 5rem; */
 	color: rgba(255,255,255,0.5);
-	width:250px;
-	height:70px;
+	width:240px;
+	height:90px;
 	position:absolute;
-	top:-70px;
+	top:-80px;
 	left:0px;
 	z-index:-1;
 }

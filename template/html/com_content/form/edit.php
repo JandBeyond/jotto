@@ -61,7 +61,7 @@ if (!$editoroptions)
 			<?php echo $this->form->renderField('agentur','com_fields'); ?> 
 			<?php echo $this->form->renderField('e-mail','com_fields'); ?> 
 			<?php echo $this->form->renderField('link-zur-seite','com_fields'); ?> 
-			<?php echo $this->form->renderField('preis','com_fields'); ?> 
+			<?php echo $this->form->renderField('preis','com_fields'); ?>
 
 			<p class="textarea-titel"><strong><?php echo Text::_('TPL_JOTTO_REASON'); ?></strong></p>
 			<?php echo $this->form->getInput('articletext'); ?>
@@ -127,13 +127,13 @@ if (!$editoroptions)
 			<?php echo HTMLHelper::_('form.token'); ?>
 		</fieldset>
 		<div class="mb-2">
-			<button type="button" class="btn btn-primary" data-submit-task="article.save">
-				<span class="fa fa-check" aria-hidden="true"></span>
-				<?php echo Text::_('JSAVE'); ?>
-			</button>
 			<button type="button" class="btn btn-danger" data-submit-task="article.cancel">
 				<span class="fa fa-times" aria-hidden="true"></span>
 				<?php echo Text::_('JCANCEL'); ?>
+			</button>
+			<button type="button" class="btn btn-primary" data-submit-task="article.save">
+				<span class="fa fa-check" aria-hidden="true"></span>
+				<?php echo Text::_('JSAVE'); ?>
 			</button>
 			<?php if ($params->get('save_history', 0) && $this->item->id) : ?>
 				<?php echo $this->form->getInput('contenthistory'); ?>

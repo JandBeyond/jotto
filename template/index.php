@@ -151,7 +151,7 @@ $doc = JFactory::getDocument();
 			<p class="footertext">Made with <img src="<?php echo $this->baseurl.'/templates/'.$this->template; ?>/img/herz.png" class="fa-beat" style="display:inline-block; vertical-align:middle;"> by <a href="https://www.dr-menzel-it.de" target="_blank" rel="noopener noreferrer nofollow">Viviana Menzel</a> - Design <a href="https://www.8ung-media.de/" target="_blank" rel="noopener noreferrer nofollow">Ralf Nöppert</a> / Viviana Menzel - Entwicklung <a href="https://www.chmst.de/" target="_blank" rel="noopener noreferrer nofollow">Christiane Maier-Stadtherr</a> - Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></p>
 		</div>
 	</footer>
-	<button onclick="topFunction()" id="myBtn" title="Nach oben"><i class="fa fa-chevron-up" aria-hidden="true"></i></button> 
+	<button onclick="topFunction()" id="myBtn" title="Nach oben">Nach oben</button> 
 	<jdoc:include type="modules" name="debug" />
 	<script src="<?php echo $this->baseurl.'/templates/'.$this->template; ?>/js/app.js"></script>
 </body>

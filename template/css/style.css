@@ -95,6 +95,7 @@ body {
 h1,h2,h3,h4,h5,h6 {
     font-family: 'Raleway', Helvetica, Arial, sans-serif;
 	font-weight: 700;
+	hyphens: auto;
 }
 h1 {
 	font-size: 3rem;
@@ -162,6 +163,9 @@ a:focus {
 	margin: var(--s2);
 	border: 3px solid var(--c-main);
 	box-shadow: var(--c-head) 0 0 0 0.2em;
+}
+.btn-danger {
+	background-color: #666;
 }
 .btn:hover, .button:hover {
 	background-color: var(--c-primary);
@@ -428,6 +432,7 @@ footer {
     padding: var(--s2);
     text-align: center;
 	color: var(--c-main);
+	display: block;
 }
 /* Pagination */
 .pagination {

@@ -102,6 +102,7 @@ $doc = JFactory::getDocument();
 			<div class="main-content <?php echo ($this->countModules('sidebar')) ? ('with-sidebar') : ('full-width'); ?>">
 				<div>
 					<article>
+						<jdoc:include type="message" />
 						<jdoc:include type="component" />
 					</article>
 

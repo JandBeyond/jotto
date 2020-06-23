@@ -10,26 +10,27 @@ use Joomla\CMS\Uri\Uri;
 $templatePath = Uri::root() . 'templates/'.$this->template.'/css/style.css';
 HTMLHelper::_('stylesheet', $templatePath, ['version' => 'auto', 'relative' => true]);
 
-$app = JFactory::getApplication();
+$app = Factory::getApplication();
 $params = $app->getParams();
 $pageclass = $params->get('pageclass_sfx');
 $menu = $app->getMenu();
 $active = $app->getMenu()->getActive();
-$doc = JFactory::getDocument();
+$doc = Factory::getDocument();
 //$doc->addStyleSheet($this->baseurl.'/media/vendor/fontawesome-free/css/fontawesome.min.css');
 
-?><!doctype html>
+?>
+<!doctype html>
 <html lang="<?php echo $this->language; ?>">
 
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link rel="apple-touch-icon" sizes="180x180" href="<?php echo Juri::base() . 'templates/'.$this->template; ?>/img/apple-touch-icon.png"> 
-	<link rel="icon" type="image/png" sizes="32x32" href="<?php echo Juri::base() . 'templates/'.$this->template; ?>/img/favicon-32x32.png"> 
-	<link rel="icon" type="image/png" sizes="16x16" href="<?php echo Juri::base() . 'templates/'.$this->template; ?>/img/favicon-16x16.png"> 
-	<link rel="manifest" href="<?php echo Juri::base() . 'templates/'.$this->template; ?>/img/favicon/site.webmanifest"> 
+	<link rel="apple-touch-icon" sizes="180x180" href="<?php echo Uri::base() . 'templates/'.$this->template; ?>/img/apple-touch-icon.png"> 
+	<link rel="icon" type="image/png" sizes="32x32" href="<?php echo Uri::base() . 'templates/'.$this->template; ?>/img/favicon-32x32.png"> 
+	<link rel="icon" type="image/png" sizes="16x16" href="<?php echo Uri::base() . 'templates/'.$this->template; ?>/img/favicon-16x16.png"> 
+	<link rel="manifest" href="<?php echo Uri::base() . 'templates/'.$this->template; ?>/img/favicon/site.webmanifest"> 
 	<meta name="msapplication-TileColor" content="#5091cd"> 
 	<meta name="theme-color" content="#ffffff">
-	<meta property="og:image" content="<?php echo Juri::base() . 'images/jotto-og.jpg'; ?>">
+	<meta property="og:image" content="<?php echo Uri::base() . 'images/jotto-og.jpg'; ?>">
 	<meta property="og:image:width" content="1200" />
 	<meta property="og:image:height" content="1200" />
 	<meta property="og:image:alt" content="J!Otto Community Award" />
@@ -46,7 +47,7 @@ $doc = JFactory::getDocument();
 	  } else {
 		// Dynamically import the LazySizes library
 		const script = document.createElement('script');
-		script.src ='<?php echo Juri::base() . 'templates/'.$this->template; ?>/js/lazysizes.min.js';
+		script.src ='<?php echo Uri::base() . 'templates/'.$this->template; ?>/js/lazysizes.min.js';
 		script.type='text/javascript';
 		document.body.appendChild(script);
 	  }
@@ -66,7 +67,7 @@ $doc = JFactory::getDocument();
 	<?php if ($this->countModules( 'logo' )) : ?>
 		<section class="logo">
 			<div class="wrap-inside">
-				<a href="<?php echo Juri::base(); ?>">
+				<a href="<?php echo Uri::base(); ?>">
 				<jdoc:include type="modules" name="logo" />
 				</a>
 			</div>

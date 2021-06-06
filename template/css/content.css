@@ -77,6 +77,13 @@ fieldset {
 #jform_com_fields_datenschutz_checkbox_einreichung .form-check input {
 	flex: 0 0 30px;
 }
+#jform_com_fields_besonders .form-check.form-check-inline {
+	display: flex;
+	align-items: center;
+}
+#jform_com_fields_besonders .form-check.form-check-inline input {
+	width: auto;
+}
 .form-check-input {
 	margin-right: var(--s1);
 }
@@ -100,4 +107,3 @@ fieldset {
 	border: none;
 	text-align: center;
 }
-

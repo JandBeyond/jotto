@@ -50,6 +50,24 @@ if (!$list)
 								<?php echo $item->displayIntrotext; ?>
 							</p>
 						<?php endif; ?>
+
+						<?php if ($params->get('show_readmore')) : ?>
+							<p class="mod-articles-category-readmore">
+								<a class="mod-articles-category-title <?php echo $item->active; ?>" href="<?php echo $item->link; ?>">
+									<?php if ($item->params->get('access-view') == false) : ?>
+										<?php echo Text::_('MOD_ARTICLES_CATEGORY_REGISTER_TO_READ_MORE'); ?>
+									<?php elseif ($readmore = $item->alternative_readmore) : ?>
+										<?php echo $readmore; ?>
+										<?php echo HTMLHelper::_('string.truncate', $item->title, $params->get('readmore_limit')); ?>
+									<?php elseif ($params->get('show_readmore_title', 0) == 0) : ?>
+										<?php echo Text::sprintf('MOD_ARTICLES_CATEGORY_READ_MORE_TITLE'); ?>
+									<?php else : ?>
+										<?php echo Text::_('MOD_ARTICLES_CATEGORY_READ_MORE'); ?>
+										<?php echo HTMLHelper::_('string.truncate', $item->title, $params->get('readmore_limit')); ?>
+									<?php endif; ?>
+								</a>
+							</p>
+						<?php endif; ?>
 					</li>
 				<?php endforeach; ?>
 			</ul>

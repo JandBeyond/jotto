@@ -144,7 +144,19 @@
 	-webkit-filter: grayscale(1);
 	filter: grayscale(1);
 }
+.grid2 ul.winner-gallery {
+	display: grid;
+	grid-template-columns: repeat(auto-fit,minmax(500px,1fr));
+}
+.grid2 .winner-gallery li:nth-child(4) .winner-cat {
+	background-color: var(--c-hint);
+}
 
+@media (max-width: 560px) {
+	.grid2 ul.winner-gallery {
+		grid-template-columns: 1fr;
+	}
+}
 ul.winner-gallery {
   display: flex;
   flex-wrap: wrap;

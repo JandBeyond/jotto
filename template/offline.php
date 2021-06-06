@@ -14,6 +14,11 @@ $twofactormethods = AuthenticationHelper::getTwoFactorMethods();
 $app              = Factory::getApplication();
 $wa               = $this->getWebAssetManager();
 
+// Template path
+$templatePath = 'templates/' . $this->template;
+
+$sitename = htmlspecialchars($app->get('sitename'), ENT_QUOTES, 'UTF-8');
+$logo = '<img src="' . htmlspecialchars(Uri::root() . 'images/JOtto-Logo-bg.png', ENT_QUOTES, 'UTF-8') . '" alt="' . $sitename . '">';
 ?>
 <!doctype html>
 
@@ -29,19 +34,22 @@ $wa               = $this->getWebAssetManager();
 	<div id="offline">
 		<div class="wrap-inside">
 			<div class="header">
-			<?php if (!empty($logo)) : ?>
-				<h1><?php echo $logo; ?></h1>
-			<?php else : ?>
-				<h1><?php echo $sitename; ?></h1>
-			<?php endif; ?>
-			<?php if ($app->get('offline_image') && file_exists($app->get('offline_image'))) : ?>
-				<img src="<?php echo $app->get('offline_image'); ?>" alt="<?php echo $sitename; ?>">
-			<?php endif; ?>
-			<?php if ($app->get('display_offline_message', 1) == 1 && str_replace(' ', '', $app->get('offline_message')) != '') : ?>
-				<p><?php echo $app->get('offline_message'); ?></p>
-			<?php elseif ($app->get('display_offline_message', 1) == 2) : ?>
-				<p><?php echo Text::_('JOFFLINE_MESSAGE'); ?></p>
-			<?php endif; ?>
+				<?php if (!empty($logo)) : ?>
+					<?php echo $logo; ?>
+				<?php else : ?>
+					<h1><?php echo $sitename; ?></h1>
+				<?php endif; ?>
+			</div>
+			<div class="offline-content">
+				<?php if ($app->get('display_offline_message', 1) == 1 && str_replace(' ', '', $app->get('offline_message')) != '') : ?>
+					<p><?php echo $app->get('offline_message'); ?></p>
+				<?php elseif ($app->get('display_offline_message', 1) == 2) : ?>
+					<p><?php echo Text::_('JOFFLINE_MESSAGE'); ?></p>
+				<?php endif; ?>
+				<?php if ($app->get('offline_image')) : ?>
+					<?php echo HTMLHelper::_('image', $app->get('offline_image'), $sitename, [], false, 0); ?>
+				<?php endif; ?>
+			</div>
 			<div class="login">
 				<jdoc:include type="message" />
 				<form action="<?php echo Route::_('index.php', true); ?>" method="post" id="form-login">

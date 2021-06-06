@@ -280,6 +280,19 @@ hr {
     display: none;
     visibility: hidden;
 }
+.visually-hidden, .sr-only,
+.visually-hidden-focusable:not(:focus):not(:focus-within) {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
 .float-right {
 	float: right;
 }
@@ -451,4 +464,28 @@ footer {
 }
 .pagination ul li, .easy_pagination ul li {
 	margin: 0 var(--s1);
+}
+
+#offline .header {
+	display: flex;
+	justify-content: center;
+}
+#offline .offline-content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: var(--s2);
+}
+#offline .offline-content p {
+	margin-bottom: var(--s2);
+}
+#offline .offline-content img {
+	max-width: 70%;
+}
+#offline #form-login fieldset {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
 }

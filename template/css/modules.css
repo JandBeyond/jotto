@@ -161,6 +161,9 @@ ul.winner-gallery {
   display: flex;
   flex-wrap: wrap;
 }
+.winner-gallery figcaption {
+  padding: 1rem 0;
+}
 .winner-gallery li {
 	text-align: center;
 	flex-grow: 1;

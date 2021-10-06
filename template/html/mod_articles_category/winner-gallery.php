@@ -25,9 +25,9 @@ if (!$list)
 		<li>
 			<figure>
 				<figcaption>
-					<p>
+					<a class="mod-articles-category-title <?php echo $item->active; ?>" href="<?php echo $item->link; ?>">
 						<?php echo $item->title; ?> - <?php echo $item->displayAuthorName; ?>
-					</p>
+					</a>
 				</figcaption>
 				<img loading="lazy" class="lazyload" src="<?php echo htmlspecialchars($images->image_intro); ?>" alt="<?php echo $item->title; ?>">
 			</figure>
